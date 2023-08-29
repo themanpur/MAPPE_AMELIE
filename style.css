@@ -1,0 +1,136 @@
+#map {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}    
+
+.mousePosition {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgb(17, 1, 1);
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(246, 238, 238, 0.6);
+    font-size: 12px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: auto ;
+    left: 45%;
+    transform: translateX(-50%);
+    border: 1px solid rgb(17, 1, 1);
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgb(246, 238, 238);
+    font-size: 20px;
+}
+
+ 
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header'
+    'right left'; 
+}
+
+#btnCrosshair {
+    z-index: 2000;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    color: grey;
+}
+
+#Crosshair.clicked {
+    color: red;
+}
+
+#ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 288px;
+    }    
+    .ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content:"";
+    height: 0;
+    position: absolute;
+    pointer-events: none;
+    }
+    .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left:-10px;
+    }
+    .ol-popup:before {
+        border-top-color:#cccccc; margin-left: -11px;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+    }
+    .ol-popup {
+        text-decoration: none;
+        position: absolute;
+        top: 2px;
+        right: 8px;
+    }  
+    .ol-popup-closer:after {
+        content:"X";
+}
+    /* start : measure styling */
+
+    .ol-tooltip {
+        position: relative;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        color: white;  
+        padding:4px 8px;
+        opacity: 0,7;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+    .ol-tooltip-measure {
+        opacity: 1;
+        font-weight: bold;
+    }
+    .ol-tooltip-static {
+        background-color: #ffcc33;
+        color: black;
+        border: 1px solid white;
+    }
+    .ol-tooltip-measure:before,
+    .ol-tooltip-static:before {
+        border-top: 6px solid rgba(0, 0, 0, 0.5);
+        border-right: 6px solid transparent;
+        border-left:6px solid transparent;
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        margin-left: -7px;
+        left: 50%;
+    }
+    .ol-toltiip-static:before {
+        border-top-color: #ffcc33;
+    }   
+
+
